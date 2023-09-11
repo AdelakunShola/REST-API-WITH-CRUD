@@ -12,8 +12,8 @@
 
 ## _SAMPLE API USAGE_
 
-##                     _RESPONSE FORMATS AND RESPONSE FORMAT_
-1.	List All Persons (GET /api)
+##                     _REQUEST FORMAT AND RESPONSE FORMAT_
+1.	_List All Persons_ (GET /api)
 Request:
 Method: GET
 URL: http://localhost:8001/api
@@ -39,7 +39,7 @@ Response Body (JSON):
 ```
 
 
-2.	Get a Specific Person (GET /api/{id})
+2.	_Get a Specific Person_ (GET /api/{id})
 Request:
 Method: GET
 URL: http://localhost:8001/api/1
@@ -56,7 +56,7 @@ Response Body (JSON):
 }
 ```
 
-3.	Create a New Person (POST /api)
+3.	_Create_ a New Person (POST /api)
 Request:
 Method: POST
 URL: http://localhost:8001/api
@@ -81,7 +81,7 @@ Response:
 }
 ```
 
-4.	Update an Existing Person (PUT /api/{id})
+4.	_Update_ an Existing Person (PUT /api/{id})
 Request:
 Method: PUT
 URL: http://localhost:8001/api/1
@@ -106,7 +106,7 @@ Response Body (JSON): See "Response Formats" below.
 }
 ```
 
-5.	Delete a Person (DELETE /api/{id})
+5.	_Delete_ a Person (DELETE /api/{id})
 
 Request:
 Method: DELETE
