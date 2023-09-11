@@ -1,15 +1,18 @@
 # REST-API-WITH-CRUD
 
-#API Documentation
-##Standard Formats for Requests and Responses
-##Request Formats
+## API Documentation
+## Standard Formats for Requests and Responses
+## Request Formats
 1.	List All Persons (GET /api)
 2.	Get a Specific Person (GET /api/{id})
 3.	Create a New Person (POST /api)
 4.	Update an Existing Person (PUT /api/{id})
 5.	Delete a Person (DELETE /api/{id})
 
-                          #_RESPONSE FORMATS AND RESPONSE FORMAT_
+
+## _SAMPLE API USAGE_
+
+##                     _RESPONSE FORMATS AND RESPONSE FORMAT_
 1.	List All Persons (GET /api)
 Request:
 Method: GET
@@ -114,13 +117,13 @@ Status Code: 204 No Content
 
 
 
-#_Known Limitations and Assumptions_
+# _Known Limitations and Assumptions_
 
 This documentation assumes that the API is running locally on http://localhost:8001. Adjust the base URL accordingly if your API is deployed to a different location.
 The API assumes that you have a MySQL or compatible database configured and running, as the code uses Eloquent ORM to interact with the database. Ensure your database connection settings are correctly configured in Laravel's .env file.
 Validation and error handling are implemented.
 
-##_Setting Up and Deploying the API Locally or on a Server_
+## _Setting Up and Deploying the API Locally or on a Server_
 To set up and deploy the API, follow these general steps:
 1.	Clone your Laravel project repository to your local machine using Git.
 2.	Configure your database connection settings in the .env file.
@@ -134,7 +137,7 @@ For deploying the API on a server, you will typically need to set up a web serve
 Remember to secure your server, configure environment variables, and follow best practices for production deployments.
 
 
-##_Using Postman for API Testing_
+## _Using Postman for API Testing_
 Postman is a popular tool for testing APIs. You can use Postman to send HTTP requests to your API endpoints and validate the responses. Follow these steps to set up Postman for testing your Laravel API:
 _Download and Install Postman:_
 If you haven't already, download and install Postman from the official website.
@@ -154,7 +157,7 @@ Click the "Send" button to send the request to your API.
 Observe the response to verify that your API is working as expected.
 
 
-_Deploying the API on a Server:_
+## _Deploying the API on a Server:_
 1. Choose a Hosting Environment:
 Choose a hosting provider or server environment for deploying your Laravel API. Common options include shared hosting, VPS (Virtual Private Server), cloud providers (e.g., AWS, Azure, DigitalOcean), or a dedicated server.
 2. Set Up a Web Server:
