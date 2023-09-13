@@ -24,7 +24,7 @@ class PersonController extends Controller
         try {
             $person = Person::find($id);
             if ($person) {
-                return response()->json($person);
+                return response()->json($person, JSON_PRETTY_PRINT);
             } else {
                 return response()->json(['message' => 'Person not found.'], 404);
             }
