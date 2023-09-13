@@ -11,7 +11,7 @@ class PersonController extends Controller
     {
         try {
             $persons = Person::all();
-            return response()->json($persons, 200, [], JSON_PRETTY_PRINT);
+            return response()->json($persons, 200);
         } catch (\Exception $e) {
             Log::error($e->getMessage());
             return response()->json(['message' => 'An error occurred.'], 500);
