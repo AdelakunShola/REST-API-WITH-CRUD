@@ -16,7 +16,7 @@
 1.	_List All Persons_ (GET /api)
 Request:
 Method: GET
-URL: http://localhost:8001/api
+URL: http://localhost:8000/api
 Response:
 Status Code: 200 OK
 Response Body (JSON):
@@ -42,7 +42,7 @@ Response Body (JSON):
 2.	_Get a Specific Person_ (GET /api/{id})
 Request:
 Method: GET
-URL: http://localhost:8001/api/1
+URL: http://localhost:8000/api/1
 Response:
 Status Code: 200 OK
 Response Body (JSON):
@@ -59,7 +59,7 @@ Response Body (JSON):
 3.	_Create_ a New Person (POST /api)
 Request:
 Method: POST
-URL: http://localhost:8001/api
+URL: http://localhost:8000/api
 Request Body (JSON):
  
   ```php
@@ -84,7 +84,7 @@ Response:
 4.	_Update_ an Existing Person (PUT /api/{id})
 Request:
 Method: PUT
-URL: http://localhost:8001/api/1
+URL: http://localhost:8000/api/1
 Request Body (JSON):
  
  ```php
@@ -110,7 +110,7 @@ Response Body (JSON): See "Response Formats" below.
 
 Request:
 Method: DELETE
-URL: http://localhost:8001/api/1
+URL: http://localhost:8000/api/1
 Response:
 Status Code: 204 No Content
 
@@ -119,7 +119,7 @@ Status Code: 204 No Content
 
 # _Known Limitations and Assumptions_
 
-This documentation assumes that the API is running locally on http://localhost:8001. Adjust the base URL accordingly if your API is deployed to a different location.
+This documentation assumes that the API is running locally on http://localhost:8000. Adjust the base URL accordingly if your API is deployed to a different location.
 The API assumes that you have a MySQL or compatible database configured and running, as the code uses Eloquent ORM to interact with the database. Ensure your database connection settings are correctly configured in Laravel's .env file.
 Validation and error handling are implemented.
 
@@ -131,7 +131,7 @@ To set up and deploy the API, follow these general steps:
 4.	Generate an application key: Run php artisan key:generate.
 5.	Run database migrations: Run php artisan migrate to create the necessary database tables.
 6.	Start the development server: Run php artisan serve to run the API locally.
-7.	Access the API endpoints using the base URL (http://localhost:8001/api) and follow the sample usage instructions mentioned earlier.
+7.	Access the API endpoints using the base URL (http://localhost:8000/api) and follow the sample usage instructions mentioned earlier.
 8.	Use Postman to test the API.
 For deploying the API on a server, you will typically need to set up a web server (e.g., Apache or Nginx) and configure it to serve your Laravel application. The exact steps may vary depending on your server environment and hosting provider.
 Remember to secure your server, configure environment variables, and follow best practices for production deployments.
