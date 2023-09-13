@@ -27,14 +27,14 @@ Route::prefix('')->group(function () {
     Route::get('/', [App\Http\Controllers\PersonController::class, 'index']);
 
     // Show (Get a specific person by ID)
-    Route::get('/{id}', [PersonController::class, 'show']);
+    Route::get('/{user_id}', [PersonController::class, 'show']);
 
     // Store (Create a new person)
     Route::post('/', [PersonController::class, 'store']);
 
     // Update (Update an existing person by ID)
-    Route::put('/{id}', [PersonController::class, 'update']);
+    Route::put('/{user_id}', [PersonController::class, 'update']);
 
     // Delete (Delete a person by ID)
-    Route::delete('/{id}', [PersonController::class, 'destroy']);
+    Route::delete('/{user_id}', [PersonController::class, 'destroy']);
 });

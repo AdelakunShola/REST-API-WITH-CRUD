@@ -43,7 +43,7 @@ Response Body (JSON):
 ```
 
 
-2.	_Get a Specific Person_ (GET /api/{id})
+2.	_Get a Specific Person_ (GET /api/{user_id})
 Request:
 Method: GET
 URL: http://localhost:8000/api/1
@@ -85,7 +85,7 @@ Response:
 }
 ```
 
-4.	_Update_ an Existing Person (PUT /api/{id})
+4.	_Update_ an Existing Person (PUT /api/{user_id})
 Request:
 Method: PUT
 URL: http://localhost:8000/api/1
@@ -110,7 +110,7 @@ Response Body (JSON): See "Response Formats" below.
 }
 ```
 
-5.	_Delete_ a Person (DELETE /api/{id})
+5.	_Delete_ a Person (DELETE /api/{user_id})
 
 Request:
 Method: DELETE

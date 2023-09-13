@@ -19,10 +19,10 @@ class PersonController extends Controller
         }
     }
 
-    public function show($id)
+    public function show($user_id)
     {
         try {
-            $person = Person::find($id);
+            $person = Person::find($user_id);
             if ($person) {
                 return response()->json($person);
             } else {
@@ -58,7 +58,7 @@ class PersonController extends Controller
 
 
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $user_id)
     {
         try {
             $this->validate($request, [
@@ -66,7 +66,7 @@ class PersonController extends Controller
                 // Add validation rules for other fields if needed
             ]);
 
-            $person = Person::find($id);
+            $person = Person::find($user_id);
             if ($person) {
                 $person->update($request->all());
                 return response()->json($person);
@@ -79,10 +79,10 @@ class PersonController extends Controller
         }
     }
 
-    public function destroy($id)
+    public function destroy($user_id)
     {
         try {
-            $person = Person::find($id);
+            $person = Person::find($user_id);
             if ($person) {
                 $person->delete();
                 return response()->json(null, 204);
