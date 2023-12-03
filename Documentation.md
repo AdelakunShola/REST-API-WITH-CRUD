@@ -8,10 +8,10 @@
 ## Standard Formats for Requests and Responses
 ## Request Formats
 1.	List All Persons (GET /api)
-2.	Get a Specific Person (GET /api/{id})
+2.	Get a Specific Person (GET /api/{user_id})
 3.	Create a New Person (POST /api)
-4.	Update an Existing Person (PUT /api/{id})
-5.	Delete a Person (DELETE /api/{id})
+4.	Update an Existing Person (PUT /api/{user_id})
+5.	Delete a Person (DELETE /api/{user_id})
 
 
 ## _SAMPLE API USAGE_
