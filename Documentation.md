@@ -1,4 +1,4 @@
-# REST API Documentation
+# Database Blueprint/design Documentation
 
 
 
@@ -7,7 +7,6 @@
 
 
 
-# REST-API-WITH-CRUD
 
 
 [DB DIAGRAM LINK](https://dbdiagram.io/d/669152f79939893daec95175)
