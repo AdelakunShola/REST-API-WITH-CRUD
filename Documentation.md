@@ -385,7 +385,7 @@
     ```json
     {
         "id": 1,
-        "amount": 100.50,
+        "amount": 1000.50,
         "user_id": 1,
         "status": "Successful",
         "payment_method": "Stripe",
@@ -407,23 +407,6 @@
     }
     ```
 
-- **Response:**
-  - Status Code: 200 OK
-  - Response Body (JSON):
-
-    ```json
-    {
-        "id": 1,
-        "amount": 100.50,
-        "user_id": 1,
-        "status": "paid",
-        "payment_method": "Stripe",
-        "transaction_id": "updated_stripe_transaction_id_456",
-        "created_at": "2023-09-12T15:22:18.000000Z",
-        "updated_at": "2023-09-13T10:15:42.000000Z"
-    }
-    ```
-
 #### Delete Payment Transaction (DELETE /api/payments/{payment_id})
 
 - **Request:**
@@ -431,8 +414,14 @@
   - URL: `http://localhost:8000/api/payments/{payment_id}`
 
 - **Response:**
-  - Status Code: 204 No Content
+  - Status Code: 200 OK
+  - Response Body (JSON):
 
+    ```json
+    {
+        "message": "Payment Transaction with ID {payment_id} deleted successfully."
+    }
+    ```
 
 
 
