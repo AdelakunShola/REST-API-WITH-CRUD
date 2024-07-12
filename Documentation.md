@@ -396,17 +396,6 @@
 
 
 
-  - Method: PUT
-  - URL: `http://localhost:8000/payments/{payment_id}`
-  - Request Body (JSON):
-
-    ```json
-    {
-        "status": "paid",
-        "transaction_id": "updated_stripe_transaction_id_456"
-    }
-    ```
-
 #### Delete Payment Transaction (DELETE /api/payments/{payment_id})
 
 - **Request:**
