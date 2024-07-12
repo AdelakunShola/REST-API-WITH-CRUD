@@ -2,11 +2,24 @@
 
 ## API Endpoints
 
-### List All Persons (GET /api)
+### List All Persons (POST /Register)
 
 - **Request:**
-  - Method: GET
+  - Method: POST
   - URL: `http://localhost:8000/api`
+
+
+    ```json
+    [
+        {
+            
+            "name": "Jane Smith",
+            "email": "harry@gmail.com",
+            "password": "0987700997"
+           
+        }
+    ]
+    ```
 
 - **Response:**
   - Status Code: 200 OK
@@ -18,8 +31,8 @@
             "id": 1,
             "name": "Jane Smith",
             "email": "harry@gmail.com",
-            "password": "gtksytdcg974yhf93fh38h",
-            "Role_id": "2",
+            "password": "0987700997",
+            "Role_id": "1",
             "created_at": "2023-09-11T09:45:32.000000Z"
         }
     ]
@@ -244,7 +257,7 @@
 - **Response:**
   - Status Code: 200 OK
   - Response Body (JSON):
-  
+
     ```json
     {
         "id": 1,
