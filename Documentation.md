@@ -2,18 +2,18 @@
 
 ## API Endpoints
 
-### List All Persons (POST /Register)
+### Register a new user (POST /Register)
 
 - **Request:**
   - Method: POST
-  - URL: `http://localhost:8000/api`
+  - URL: `http://localhost:8000/register`
 
 
     ```json
     [
         {
             
-            "name": "Jane Smith",
+            "name": "Harry Gold",
             "email": "harry@gmail.com",
             "password": "0987700997"
            
@@ -29,7 +29,7 @@
     [
         {
             "id": 1,
-            "name": "Jane Smith",
+            "name": "Harry Gold",
             "email": "harry@gmail.com",
             "password": "0987700997",
             "Role_id": "1",
@@ -38,11 +38,30 @@
     ]
     ```
 
-### Get a Specific Person (GET /api/{user_id})
+
+
+
+
+
+    
+
+### Login a User (POST /login})
 
 - **Request:**
-  - Method: GET
-  - URL: `http://localhost:8000/api/{user_id}`
+  - Method: POST
+  - URL: `http://localhost:8000/login`
+
+  ```json
+    [
+        {
+            
+           
+            "email": "harry@gmail.com",
+            "password": "0987700997"
+           
+        }
+    ]
+    ```
 
 - **Response:**
   - Status Code: 200 OK
@@ -50,15 +69,28 @@
 
     ```json
     {
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjMxMjFiZjZmZmIyZjQ4Y2M3NzZiYzFjZWE3YTU5ZDE2ZTY0Y2E3NTU2ZmQyNmE3ODc3NmRmODQ3ODZhMzFmZjQyY2QxYjE5N2ZjZTc5NTJhIn0",
+    "token_type": "Bearer",
+    "user": {
         "id": 1,
-        "name": "John Doe",
-        "email": "johndoe@example.com",
-        "password": "hashedpassword",
-        "Role_id": 2,
-        "created_at": "2023-09-10T12:34:56.000000Z",
-        "updated_at": "2023-09-10T12:34:56.000000Z"
-    }
+        "name": "Harry Gold",
+        "email": "harry@gmail.com",
+        "created_at": "2023-09-10T12:34:56.000000Z"
+    }}
+
+
     ```
+
+
+
+
+
+
+
+
+
+
+
 
 ### Create a New Person (POST /api)
 
@@ -91,11 +123,23 @@
     }
     ```
 
-### Update an Existing Person (PUT /api/{user_id})
+
+
+
+
+
+
+
+
+
+
+
+
+### Update an Existing User (PUT /update/{user_id})
 
 - **Request:**
   - Method: PUT
-  - URL: `http://localhost:8000/api/{user_id}`
+  - URL: `http://localhost:8000/update/{user_id}`
   - Request Body (JSON):
 
     ```json
@@ -115,11 +159,19 @@
         "id": 1,
         "name": "Updated Name",
         "email": "updatedname@example.com",
-        "Role_id": 2,
+        "Role_id": 1,
         "created_at": "2023-09-10T12:34:56.000000Z",
         "updated_at": "2023-09-13T10:15:42.000000Z"
     }
     ```
+
+
+
+
+
+
+
+
 
 ### Delete a Person (DELETE /api/{user_id})
 
