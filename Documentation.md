@@ -43,9 +43,9 @@
 
 
 
-    
 
-### Login a User (POST /login})
+
+### Login a User (POST /login)
 
 - **Request:**
   - Method: POST
@@ -89,52 +89,6 @@
 
 
 
-
-
-
-### Create a New Person (POST /api)
-
-- **Request:**
-  - Method: POST
-  - URL: `http://localhost:8000/api`
-  - Request Body (JSON):
-
-    ```json
-    {
-        "name": "New Person",
-        "email": "newperson@example.com",
-        "password": "hashedpassword",
-        "Role_id": 1
-    }
-    ```
-
-- **Response:**
-  - Status Code: 201 Created
-  - Response Body (JSON):
-
-    ```json
-    {
-        "id": 3,
-        "name": "New Person",
-        "email": "newperson@example.com",
-        "Role_id": 1,
-        "created_at": "2023-09-12T15:22:18.000000Z",
-        "updated_at": "2023-09-12T15:22:18.000000Z"
-    }
-    ```
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Update an Existing User (PUT /update/{user_id})
 
 - **Request:**
@@ -146,7 +100,7 @@
     {
         "name": "Updated Name",
         "email": "updatedname@example.com",
-        "Role_id": 2
+      
     }
     ```
 
@@ -173,31 +127,50 @@
 
 
 
-### Delete a Person (DELETE /api/{user_id})
+### Delete a User (DELETE /delete/{user_id})
 
 - **Request:**
   - Method: DELETE
-  - URL: `http://localhost:8000/api/{user_id}`
+  - URL: `http://localhost:8000/delete/{user_id}`
 
 - **Response:**
-  - Status Code: 204 No Content
+  - Status Code: 200 OK
+  - Response Body (JSON):
+
+    ```json
+    {
+        "message": "User with ID {user_id} deleted successfully."
+    }
+    ```
 
 ---
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Blogs Table
 
-#### Create a New Blog (POST /api/blogs)
+#### Create a New Blog (POST /blogs)
 
 - **Request:**
   - Method: POST
-  - URL: `http://localhost:8000/api/blogs`
+  - URL: `http://localhost:8000/blogs`
   - Request Body (JSON):
 
     ```json
     {
         "title": "New Blog Post",
-        "body": "Content of the blog post.",
-        "user_id": 1
+        "body": "Content of the blog post."     
     }
     ```
 
@@ -211,16 +184,15 @@
         "title": "New Blog Post",
         "body": "Content of the blog post.",
         "user_id": 1,
-        "created_at": "2023-09-12T15:22:18.000000Z",
-        "updated_at": "2023-09-12T15:22:18.000000Z"
+        "created_at": "2023-09-12T15:22:18.000000Z"
     }
     ```
 
-#### Update a Blog Post (PUT /api/blogs/{blog_id})
+#### Update a Blog Post (PUT /blogs/{blog_id})
 
 - **Request:**
   - Method: PUT
-  - URL: `http://localhost:8000/api/blogs/{blog_id}`
+  - URL: `http://localhost:8000/blogs/{blog_id}`
   - Request Body (JSON):
 
     ```json
@@ -252,7 +224,12 @@
   - URL: `http://localhost:8000/api/blogs/{blog_id}`
 
 - **Response:**
-  - Status Code: 204 No Content
+
+   ```json
+    {
+        "message": "User with ID {user_id} deleted successfully."
+    }
+    ```
 
 ---
 
@@ -262,16 +239,16 @@
 
 - **Request:**
   - Method: POST
-  - URL: `http://localhost:8000/api/payments`
+  - URL: `http://localhost:8000/payments`
   - Request Body (JSON):
 
     ```json
     {
-        "amount": 100.50,
+        "amount": 1000.50,
         "user_id": 1,
         "status": "pending",
         "payment_method": "Stripe",
-        "transaction_id": "stripe_transaction_id_123"
+        "transaction_id": "id_12765789u8765433"
     }
     ```
 
@@ -284,19 +261,17 @@
         "id": 1,
         "amount": 100.50,
         "user_id": 1,
-        "status": "pending",
+        "status": "Successful",
         "payment_method": "Stripe",
-        "transaction_id": "stripe_transaction_id_123",
-        "created_at": "2023-09-12T15:22:18.000000Z",
-        "updated_at": "2023-09-12T15:22:18.000000Z"
+        "transaction_id": "id_12765789u8765433",
+        "created_at": "2023-09-12T15:22:18.000000Z"
     }
     ```
 
-#### Update Payment Status (PUT /api/payments/{payment_id})
 
-- **Request:**
+
   - Method: PUT
-  - URL: `http://localhost:8000/api/payments/{payment_id}`
+  - URL: `http://localhost:8000/payments/{payment_id}`
   - Request Body (JSON):
 
     ```json
@@ -331,3 +306,131 @@
 
 - **Response:**
   - Status Code: 204 No Content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Create a new Organization (POST /Register)
+
+- **Request:**
+  - Method: POST
+  - URL: `http://localhost:8000/register`
+
+
+    ```json
+    [
+        {
+            
+            "name": "First Org",
+            "description": "A new dawn",
+           
+        }
+    ]
+    ```
+
+- **Response:**
+  - Status Code: 200 OK
+  - Response Body (JSON):
+
+    ```json
+    [
+        {
+            "id": 1,
+            "name": "First Org",
+            "description": "A new dawn",
+            "created_at": "2023-09-11T09:45:32.000000Z"
+        }
+    ]
+    ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Update an Existing Organization (PUT /update/{org_id})
+
+- **Request:**
+  - Method: PUT
+  - URL: `http://localhost:8000/update/{org_id}`
+  - Request Body (JSON):
+
+    ```json
+    {
+        "name": "Updated Organization Name",
+        "description": "Updated Organization Description",
+      
+    }
+    ```
+
+- **Response:**
+  - Status Code: 200 OK
+  - Response Body (JSON):
+
+    ```json
+    {
+        "id": 1,
+        "name": "Updated Organization Name",
+        "description": "Updated Organization Description",
+        "created_at": "2023-09-10T12:34:56.000000Z",
+        "updated_at": "2023-09-13T10:15:42.000000Z"
+    }
+    ```
+
+
+### Delete Organization (DELETE /delete/{org_id})
+
+- **Request:**
+  - Method: DELETE
+  - URL: `http://localhost:8000/delete/{org_id}`
+
+- **Response:**
+  - Status Code: 200 OK
+  - Response Body (JSON):
+
+    ```json
+    {
+        "message": "Organization with ID {org_id} deleted successfully."
+    }
+    ```
+
+---
+
