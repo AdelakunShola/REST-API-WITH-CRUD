@@ -84,11 +84,10 @@ php artisan serve
 ```
 
 
-
 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT git [LICENSE](license.com). See the LICENSE file for details.
 Acknowledgements
 •	Laravel for the robust framework
 •	OpenAPI for API documentation
+•   Diagamio for db design
 •	Composer for dependency management
-
