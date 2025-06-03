@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Http\Request;
-
 use App\Http\Controllers\PersonController;
+use App\Http\Controllers\PostController;
+use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +22,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
+
+Route::apiResource('posts', PostController::class);
+Route::post('/register', [PostController::class, 'register']);
+Route::post('/login', [PostController::class, 'login']);
+Route::post('/logout', [PostController::class, 'logout'])->middleware('auth:sanctum');
 
 
 Route::prefix('')->group(function () {
